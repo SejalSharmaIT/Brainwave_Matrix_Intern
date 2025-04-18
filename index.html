@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>EventManager</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Form -->
+<div id="login-form" class="login-form">
+    <h2>Login to EventManager</h2>
+    <form id="login">
+        <input type="text" id="username" placeholder="Username" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <button type="submit" class="btn">Login</button>
+    </form>
+    <p id="login-error" style="color: red; display: none;">Invalid username or password</p>
+</div>
+
+
+
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to EventManager</h2>
+            <p>Manage your events easily and efficiently with our intuitive platform. From conferences to workshops, we've got you covered!</p>
+
+            <a href="#events" class="btn">Explore Events</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>We provide an easy-to-use platform to plan, manage, and promote your events effortlessly. Whether you're organizing a small gathering or a large-scale conference, our platform has everything you need to make it a success.
+        Our platform offers a seamless experience for event planners of all types, with features that allow you to customize event pages, manage attendees, and handle logistics efficiently. From live scheduling to real-time attendee engagement, we make event management a breeze.</p>
+            
+    
+            <div class="about-details">
+                <div class="about-item">
+                    <h3>Our Mission</h3>
+                    <p>To simplify the event planning process and provide users with a seamless and efficient experience, enabling them to focus on what matters most: delivering an unforgettable event.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Our Vision</h3>
+                    <p>To become the leading event management platform globally, empowering event organizers with the tools they need to create memorable experiences for attendees and participants alike.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Our Team</h3>
+                    <p>We are a passionate team of event enthusiasts, designers, developers, and strategists who work tirelessly to ensure our platform meets your expectations. Together, we aim to make your events extraordinary!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="events">
+        <div class="content">
+            <h2>Upcoming Events</h2>
+            </div>
+    
+            <!-- Featured Event Section -->
+    <div class="featured-event">
+        <div class="event-card featured">
+            <img src="featured.jpg" alt="Featured Event">
+            <h3>Annual Business Conference 2025</h3>
+            <p>Join us for an insightful experience in the world of business.</p>
+            <button class="btn register-now" data-event="Annual Business Conference 2025" data-date="2025-05-01" data-time="10:00 AM">Register Now</button>
+        </div>
+    </div>
+
+    <!-- Events List Section -->
+    <div class="events-list" style="margin-top: 20px;">
+        <div class="event-grid">
+            <!-- Event 1 -->
+            <div class="event-card">
+                <img src="AnnualConference.jpg" alt="Event 1">
+                <h3>Annual Conference</h3>
+                <p>Join us for an insightful experience in the world of business.</p>
+                <button class="btn register-now" data-event="Annual Conference" data-date="2025-05-10" data-time="09:00 AM">Register Now</button>
+            </div>
+            <!-- Event 2 -->
+            <div class="event-card">
+                <img src="TechMeetup.jpg" alt="Event 2">
+                <h3>Tech Meetup</h3>
+                <p>Discover the latest trends in technology and innovation.</p>
+                <button class="btn register-now" data-event="Tech Meetup" data-date="2025-06-15" data-time="11:00 AM">Register Now</button>
+            </div>
+            <!-- Event 3 -->
+            <div class="event-card">
+                <img src="MarketingWorkshop.jpg" alt="Event 3">
+                <h3>Marketing Workshop</h3>
+                <p>Learn about the latest digital marketing strategies from experts.</p>
+                <button class="btn register-now" data-event="Marketing Workshop" data-date="2025-07-05" data-time="02:00 PM">Register Now</button>
+            </div>
+            <!-- Event 4 -->
+            <div class="event-card">
+                <img src="AI & Machine Learning Webinar.jpg" alt="Event 4">
+                <h3>AI & Machine Learning Webinar</h3>
+                <p>Join industry experts as they discuss the latest in AI technologies.</p>
+                <button class="btn register-now" data-event="AI & Machine Learning Webinar" data-date="2025-08-20" data-time="01:00 PM">Register Now</button>
+            </div>
+            <!-- Event 5 -->
+            <div class="event-card">
+                <img src="Birthday Party.jpg" alt="Birthday Party">
+                <h3>Surprise Birthday Bash</h3>
+                <p>Celebrate a special day with cake, music, and surprises for all ages.</p>
+                <button class="btn register-now" data-event="Surprise Birthday Bash" data-date="2025-09-10" data-time="06:00 PM">Register Now</button>
+            </div>
+            <!-- Event 6 -->
+            <div class="event-card">
+                <img src="Wedding Ceremony.jpg" alt="Wedding Ceremony">
+                <h3>Grand Wedding Celebration</h3>
+                <p>Join us to witness the union of two souls in a beautiful wedding ceremony.</p>
+                <button class="btn register-now" data-event="Grand Wedding Celebration" data-date="2025-10-12" data-time="04:00 PM">Register Now</button>
+            </div>
+        </div>
+    </div>
+        </div>
+    </section>
+    
+
+
+ <!-- Registration Form (Initially Hidden) -->
+ <div class="registration-form" style="display: none;">
+    <h2>Register for <span id="event-name">Event</span></h2>
+    <p>Date: <span id="event-date"></span></p>
+    <p>Time: <span id="event-time"></span></p>
+    <form id="registration-form">
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <textarea placeholder="Any comments or questions?" required></textarea><br>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    <button class="btn close-form">Close</button>
+</div>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Have any questions? Reach out to us for more details. We're here to help you!</p>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are a platform dedicated to making event planning simple and efficient. <br/>Our goal is to help you organize and manage events effortlessly, from small gatherings to large conferences.</p>
+            </div>
+    
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@events.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Address: 123 Event Road, Mumbai, Maharashtra, India</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Event Management. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
