@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grocery Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">FreshGro</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+         <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#cart" id="cart-link">🛒 Cart (0)</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+<!-- Home Section -->
+<section id="home" class="section home-section">
+  <div class="home-content">
+    <div class="text-content">
+      <h1>FreshGro – Freshness at Your Doorstep</h1>
+      <p>Discover farm-fresh fruits, vegetables, dairy, grains, and everyday essentials delivered quickly and safely to your home.</p>
+      <a href="#products" class="shop-btn">Shop Now</a>
+      <img src="cartimg.png" alt="Promotional Offer" class="below-btn-img">
+    </div>
+    <div class="image-content">
+      <img src="vege.jpg" alt="Fresh grocery delivery" class="banner-img">
+    </div>
+  </div>
+</section>
+
+
+<!-- About Us Section -->
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>FreshGro is committed to delivering farm-fresh groceries to your doorstep at affordable prices. We source directly from trusted local farms and suppliers to ensure unmatched quality and freshness.</p>
+
+  <div class="about-grid">
+    <div class="about-box">
+      <h3>Our Mission</h3>
+      <p>To provide every household with easy access to fresh, healthy, and affordable groceries through a seamless online experience.</p>
+    </div>
+    
+    <div class="about-box">
+      <h3>Our Vision</h3>
+      <p>To become the most trusted online grocery platform by promoting sustainable farming and ensuring customer satisfaction every step of the way.</p>
+    </div>
+
+    <div class="about-box">
+      <h3>Our Specialties</h3>
+      <ul>
+        <li>🌿 Organic and locally sourced produce</li>
+        <li>🚚 Same-day delivery</li>
+        <li>💰 Affordable pricing</li>
+        <li>🧺 Easy-to-use online platform</li>
+        <li>✅ Quality assurance guaranteed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Products Section -->
+<section id="products">
+  <h2>Our Grocery Products</h2>
+  <div class="product-grid">
+    
+    <div class="product-card">
+      <img src="apple.jpg" alt="Apples">
+      <h3>Apples</h3>
+      <p>₹120 per kg</p>
+      <button onclick="addToCart('Apples', 120)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="banana.jpg" alt="Bananas">
+      <h3>Bananas</h3>
+      <p>₹40 per kg</p>
+      <button onclick="addToCart('Bananas', 40)">Add to Cart</button>
+    </div>
+
+        <div class="product-card">
+      <img src="cabbage.jpg" alt="Cabbages">
+      <h3>Cabbages</h3>
+      <p>₹45 per kg</p>
+      <button onclick="addToCart('Cabbages', 45)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="potato.jpg" alt="Potatoes">
+      <h3>Potatoes</h3>
+      <p>₹30 per kg</p>
+      <button onclick="addToCart('Potatoes', 30)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="mango.jpg" alt="Mangoes">
+      <h3>Mangoes</h3>
+      <p>₹100 per kg</p>
+      <button onclick="addToCart('Mangoes', 100)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="onionimg.jpg" alt="Onions">
+      <h3>Onions</h3>
+      <p>₹40 per kg</p>
+      <button onclick="addToCart('Onions', 40)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="lemons.jpg" alt="Lemons">
+      <h3>Lemons</h3>
+      <p>₹60 per kg</p>
+      <button onclick="addToCart('Lemons', 60)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="pineapple.jpg" alt="Pineapples">
+      <h3>Pineapples</h3>
+      <p>₹80 per kg</p>
+      <button onclick="addToCart('Pineapples', 80)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Offers Section -->
+<section id="offers" class="section">
+  <h2>Special Offers</h2>
+  
+  <div class="offer-cards">
+    <div class="offer-card">
+      <img src="snacks-offer.jpg" alt="Buy 1 Get 1 Free on Select Snacks" class="offer-img">
+      <h3>Buy 1 Get 1 Free on Select Snacks</h3>
+      <p>Enjoy double the fun with your favorite snacks! Limited time offer on selected products.</p>
+      <a href="#snacks" class="offer-btn">Shop Now</a>
+    </div>
+
+    <div class="offer-card">
+      <img src="discount-offer.jpg" alt="10% Off on Orders Above ₹500" class="offer-img">
+      <h3>10% Off on Orders Above ₹500</h3>
+      <p>Save more on your grocery shopping! Apply code <strong>FRESH10</strong> at checkout.</p>
+      <a href="#shop-now" class="offer-btn">Claim Offer</a>
+    </div>
+
+    <div class="offer-card">
+      <img src="free-delivery.jpg" alt="Free Delivery on First Order" class="offer-img">
+      <h3>Free Delivery on First Order</h3>
+      <p>Your first order is on us! Get free delivery when you shop today.</p>
+      <a href="#first-order" class="offer-btn">Get Started</a>
+    </div>
+  </div>
+  
+  <div class="offer-details">
+    <h3>Exclusive Offers for You</h3>
+    <ul>
+      <li><strong>Seasonal Sale:</strong> Up to 30% Off on Winter Vegetables</li>
+      <li><strong>Loyalty Program:</strong> Earn points and get discounts on every purchase!</li>
+      <li><strong>Bundle Deals:</strong> Buy Grocery Packs at Discounted Prices</li>
+    </ul>
+  </div>
+</section>
+
+
+
+  <!-- Cart Section -->
+   
+<section id="cart" class="section">
+  <h2>Your Cart</h2>
+  <p>Your cart is currently empty.</p>
+  
+  <!-- Cart items will be listed here -->
+  <ul id="cart-items-list">
+    <!-- Dynamically added items will go here -->
+  </ul>
+
+  <!-- Total Price Display -->
+  <div id="total-price" class="total">
+    <strong>Total: ₹0</strong>
+  </div>
+
+  <!-- Checkout Button (Hidden by default) -->
+  <button id="checkout-btn" class="checkout-btn" style="display: none;" onclick="checkout()">Proceed to Checkout</button>
+</section>
+
+
+
+  <!-- Contact Section -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <form id="contact-form">
+
+    <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+    <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+    <textarea id="message" name="message" rows="4" required placeholder="Enter your question or message"></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+
+</section>
+
+
+
+  <!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-center">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>FreshGro is your go-to platform for fresh groceries delivered to your doorstep. Quality products and reliable service.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+      <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul class="contact-details">
+          <li>Email: support@freshgro.com</li>
+          <li>Phone: +91-9876543210</li>
+          <li>Address: 123 Market Street, Mumbai, India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-left">
+      <p>&copy; 2025 FreshGro. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+      <script src="script.js"></script>
+</body>
+</html>
